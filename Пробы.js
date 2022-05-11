@@ -109,4 +109,68 @@
 //     }
 //     console.log(i); 
 // }
+//.......................................................................
 
+                                //ФУНКЦИИ!!!
+
+// function showFirstMessage () {
+//     console.log('Hello!');
+// }
+
+// showFirstMessage();
+
+// function showFirstMessage (text/*Аргументы*/) {
+//     console.log(text);
+// }
+
+// showFirstMessage('Hello world!');//Указываем содержание аргумента! 
+
+//................................
+
+// let num = 20;//Глобальная переменная. console.log(num); покажет 20! Без  num = 10; 
+
+// function showFirstMessage (text) {
+//         console.log(text);
+//         //1. let num = 20;//Локальная переменная, сущ-т только внутри ф-и. console.log(num); выдаст ошибку!
+
+//         //2. num = 10;//Исп-м глобальное значение let!
+
+//         //3. let num = 15;//Записываем локально. В console.log(num); получим 20!  
+//         let num = 15;
+//         console.log(num);
+//     }
+    
+//     showFirstMessage('Hello world!');
+//     console.log(num);
+// //....................................
+//     function calc(a, b) {
+//         return (a + b);
+//     }
+
+//     console.log(calc(4, 3));
+//     console.log(calc(5, 7));
+//     console.log(calc(14, 1));
+// //.....................................
+//     function ret() {
+//         let num = 50;
+//         return num;
+//     }
+
+//     const anotherNum = ret();
+//     console.log(anotherNum);
+// //......................................
+
+//         //Такую ф-ю можно вызвать только после объявления!!!
+// const logger = function() {
+//     console.log('Hello!');
+// };
+// logger();
+// //.......................................
+
+// // const calc1 = (a, b) => a + b;
+
+// const calc1 = (a, b) => {
+//     console.log('1');
+//     return a + b;
+// };
+// //.......................................................................
