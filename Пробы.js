@@ -211,4 +211,35 @@
 // const test = '12.2px';
 // console.log(parseInt(test));//Перевод строки в ЦЕЛОЕ число; 
 // console.log(parseFloat(test));//Перевод строки в число с ДЕСЯТИЧНЫМИ ЗНАЧЕНИЯМИ;
+//.......................................................................
 
+                    //CALLBACK - ФУНКЦИИ!!
+
+//CALLBACK - ф-я, кот. должна быть вып-на после того, как другая ф-я завершила своё вып-е!
+
+// function first() {
+//     //Do something
+//     setTimeout(function() {//Задержка
+//         console.log(1);
+//     }, 500);
+// }
+
+// function second() {
+//     console.log(2);
+// }
+// first();
+// second();
+//Если ф-и в коде идут одна за другой, ЭТО НЕ ЗНАЧИТ, что и ВЫПОЛНЯТЬСЯ ОНИ БУДУТ В ТАКОЙ ЖЕ ПОСЛЕД-ТИ!!!
+
+// function learnJS(lang, callback) {
+//     console.log(`Я учу: ${lang}`);
+//     callback();
+// }
+// // learnJS('JS', function() {
+// //     console.log('Bla Bla');
+// // });
+
+// function done() {
+//     console.log('Bla Bla');
+// }
+// learnJS('JS', done);
