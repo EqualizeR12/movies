@@ -506,3 +506,55 @@
 // };
 // const newObj = {...q};
 //....................................................................
+
+                //ОБЪЕКТНО-ОРИЕНТИРОВАННОЕ ПРОГРАММИРОВАНИЕ
+//Прототипно-ориентированное программирование
+// let str = 'some';
+// let strObj = new String(str);
+
+// console.log(typeof(str));
+// console.log(typeof(strObj));
+
+// console.dir([1, 2, 3]);
+//....................................
+// const soldier = {
+//     health: 400,
+//     armor: 100,
+//     sayHello: function() {
+//         console.log('Hello!');
+//     }
+// };
+
+// const jonh = {
+//     health: 100
+// };
+
+// john.__proto__ = soldier;//Устаревший формат!!!
+// console.log(jonh.armor);//100
+
+// john.sayHello();//'Hello!'
+//....................................
+// const soldier = {
+//     health: 400,
+//     armor: 100,
+//     sayHello: function() {
+//         console.log('Hello!');
+//     }
+// };
+
+// const jonh = Object.create(soldier);//Создали объект jonh, который будет прототипно наследоваться от soldier!!
+
+//........
+// const jonh = {
+//     health: 100
+// };
+
+// //1й - объект, которому присваиваем прототип! 2й - от которого!
+// Object.setPrototypeOf(jonh, soldier);
+// // console.log(jonh.armor);//100
+//.........
+
+//jonh.sayHello();//'Hello!'
+//.....................................................................
+
+                //
