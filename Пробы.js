@@ -713,5 +713,86 @@
         //👆
 //......................................................................
 
-                        //
+                        //029 Действия с элементами на странице
+// const box = document.getElementById('box'),
+//   btns = document.getElementsByTagName('button'),
+//   circles = document.getElementsByClassName('circle'),
+//   hearts = document.querySelectorAll('.heart'),
+//   oneHeart = document.querySelector('.heart'),
+//   wrapper = document.querySelector('.wrapper');
 
+//Можно записать так👇👇👇 Таким образом более точно описывая доступ
+//const box = document.getElementById('box'),
+//   btns = document.getElementsByTagName('button'),
+//   circles = document.getElementsByClassName('circle'),
+//   wrapper = document.querySelector('.wrapper'),
+//   hearts = wrapper.querySelectorAll('.heart'),
+//   oneHeart = wrapper.querySelector('.heart');
+
+
+// //Изменение стилей
+
+// // console.dir(box);//div#box.box -> style
+// // box.style.backgroundColor = 'blue';
+// // // box.style.width = 500;//Don't work
+// // box.style.width = '500px';//Working
+
+// //Чтобы не вызывать каждый раз style к каждому элементу
+// box.style.cssText = 'background-color: blue; width: 500px';
+// //Можно сделать и для динамических значений (н-р, для разных размеров окон и т.д.)👇
+// // let num = 100;
+// // box.style.cssText = `background-color: blue; width: ${num}`;
+// //👆
+
+// btns[1].style.borderRadius = '60%';
+// // circles.style.backgroundColor = 'red';//Обращаемся к псевдомассиву, который просто содержит элементы и больше ничего не знает о странице! Чтобы заработало, нужно указать индекс нужного нам элемента. Н-р:👇
+// circles[0].style.backgroundColor = 'red';
+
+//     //Произвести одни и те же действия над несколькими элементами
+
+// // for (let i = 0; i < hearts.length; i++) {
+// //     hearts[i].style.backgroundColor = 'black';
+// // } // Исп-ся очень редко, т.к. есть перебирающие методы!👇
+
+// hearts.forEach(item => {
+//     item.style.backgroundColor = 'aqua';
+// });
+
+// //Создание новых элементов 
+
+// const div = document.createElement('div'); //Существует только внутри файла .js
+// // const text = document.createTextNode('Bla Bla');//Исп-ся редко
+
+// //В основном работают с CSS-классами элементов, а не с каждым отдельно!
+// div.classList.add('black');//После classList указ. действие, кот. будет вып-ся
+// // document.body.append(div);//В конец тега body мы ставим div
+
+// // document.querySelector('.wrapper').append('div');//Если больше нигде мы не будем исп-ть wrapper. Если исп-ть несколько раз - занесли в const box(8strings)
+// wrapper.append(div);//В конце тега!
+// wrapper.prepend(div);//В начале тега!
+
+// hearts[0].before(div);//Перед hearts[0]
+// hearts[0].after(div);//После hearts[0]
+
+// circles[0].remove();//Удаляем элемент
+
+//Замена одного элемента другим
+// hearts[0].replaceWith(circles[0]);
+
+//Добавить текст в наш созданный элемент
+//1)
+// div.innerHTML = 'Hello!';
+//innerHTML позволяет добавлять HTML-структуру
+// div.innerHTML = '<h1>Hello!</h1>'; 
+
+//2)
+// div.textContent = 'Hello!!!';//HTML-структуру не поддерживает!!! Более безопасно.
+    //.......................
+
+    //Вставить кусочек HTML-кода перед или после тега!
+    // div.innerHTML = '<h1>Hello!</h1>'; 
+    //1e''- специальное слово! 2e'' - Затем HTML, который хотим вставить!👇
+    // div.insertAdjacentHTML('beforebegin', '<h2>Bla Bla</h2>');//Перед элементом
+    // div.insertAdjacentHTML('afterbegin', '<h2>Bla Bla</h2>');//После элемента
+    // div.insertAdjacentHTML('beforeend', '<h2>Bla Bla</h2>');//Перед концом элемента
+    // div.insertAdjacentHTML('afterend', '<h2>Bla Bla</h2>');//После конца элемента
