@@ -557,4 +557,56 @@
 //jonh.sayHello();//'Hello!'
 //.....................................................................
 
-                //
+                //Динамическая типизация
+//To string
+//1
+
+// console.log(typeof(String(null)));//string
+// console.log(typeof(String(4)));//string
+// console.log(String(null));//null
+
+// //2. Конкатинация - сложение строки с чем-то
+// console.log(typeof(5 + ''));//string
+
+// const num = 5;
+
+// console.log('htts://vk.com/catalog/' + num);
+
+// const fontSize = 26 + 'px';
+
+// //To Number
+// //1)
+// console.log(typeof(Number('4')));
+
+// //2) Унарный плюс
+// console.log(typeof((+'5')));
+
+// //3)
+// console.log(typeof(parseInt('15px', 10)));
+
+// let answ = +prompt('RYTR', '');
+
+//To boolean
+
+// 0, '', null, undefined, NaN; - false;
+
+//1)
+
+// let switcher = null;
+
+// if (switcher) {
+//     console.log('Work ...');
+// } //Ничего не проиойдёт
+
+// let switcher = null;
+// switcher = 1;//Значение - true, потому условие вып-ся!
+// if (switcher) {
+//     console.log('Work ...');
+// }
+
+// //2)
+
+// console.log(typeof(Boolean('4')));//boolean
+
+// //3)
+// console.log(typeof(!!'1231232'));//boolean
